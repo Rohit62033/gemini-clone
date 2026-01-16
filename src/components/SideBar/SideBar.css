@@ -1,0 +1,122 @@
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 25px 15px;
+}
+
+.sidebar.extended {
+  width: 240px;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+
+.sidebar img {
+  width: 25px
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sidebar .new-chat img {
+  width: 18px;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s;
+}
+
+.sidebar .recent-tittle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar .recent-history {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer;
+}
+
+.sidebar .recent-history:hover {
+  background-color: #e2e6eb;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .bottom-item {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 260px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+
+    /* --- GLASS EFFECT --- */
+    background: rgba(255, 255, 255, 0.15);
+    /* transparent white */
+    backdrop-filter: blur(6px);
+    /* -webkit-backdrop-filter: blur(12px);     */
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  }
+
+
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar.collapsed {
+    width: 260px;
+  }
+
+  .sidebar .new-chat {
+    width: 100%;
+  }
+
+  .sidebar .new-chat img {
+    width: 18px;
+  }
+}
+
+@media (max-width:400px) {}
