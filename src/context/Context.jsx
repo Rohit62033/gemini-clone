@@ -57,7 +57,7 @@ const ContextProvider = (props) => {
   const animateResponseText = (index, nextWord) => {
 
     const speed =30 ;
-    const maxDelay=3000;
+    const maxDelay=10000;
 
     const delay = Math.min(speed * index, maxDelay);
 
