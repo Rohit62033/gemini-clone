@@ -5,8 +5,7 @@ import remarkBreaks from "remark-breaks";
 import './Main.css';
 import { assets } from "../../assets/assets";
 import { Context } from "../../context/Context";
-import SideBar from "../SideBar/SideBar";
-import Markdown from "react-markdown";
+
 
 const Main = () => {
   const { onSent, recentPrompt, loading, resultData, setInput, input, showResult, isMobile,
