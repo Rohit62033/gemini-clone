@@ -55,15 +55,9 @@ const ContextProvider = (props) => {
   }, []);
 
   const animateResponseText = (index, nextWord) => {
-
-    const speed =30 ;
-    
-
-    const id = setTimeout(() => {
-      setResultData((prev) => prev + nextWord);
-
-    }, speed)
-    timeoutsRef.current.push(id)
+    setTimeout(function () {
+      setResultData(prev => prev + nextWord);
+    }, 30 * index);
   }
   const newChat = () => {
     setLoading(false);
@@ -98,13 +92,13 @@ const ContextProvider = (props) => {
       setLoading(false)
     }
 
-const finalResponseArray = response.split(/(\s+)/);
+    const finalResponseArray = response.split(/(\s+)/);
 
     for (let i = 0; i < finalResponseArray.length; i++) {
       const nextWord = finalResponseArray[i];
-      animateResponseText(i, nextWord );
+      animateResponseText(i, nextWord);
     }
-   
+
     setInput("");
   }
 

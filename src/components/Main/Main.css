@@ -3,7 +3,9 @@
   max-height: 100vh;
   padding-bottom: 15vh;
   position: relative;
-
+ display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .main .nav {
@@ -24,8 +26,13 @@
 }
 
 .main-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
+   flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
 }
 
 .main-container .greet {
@@ -135,9 +142,10 @@
 
 .result {
   padding: 0 5%;
-  max-height: 70vh;
-  overflow-y: scroll;
-
+  /* max-height: 70vh; */
+ flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 
 }
 
@@ -161,9 +169,10 @@
   display: flex;
   align-items: start;
   gap: 20px;
-  overflow-y: auto;
-  max-height: 70vh;
+ overflow-y: auto;
+  max-height: none;
   overflow-x: hidden;
+  flex: 1;
 }
 
 .result-data::-webkit-scrollbar {
@@ -200,11 +209,7 @@
 
 }
 
-.result-data {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
+
 
 .result-data img {
   width: 32px;
@@ -239,11 +244,11 @@
 
 @media (max-width:600px) {
 
-  .main {
+  /* .main {
     max-height: none;
     min-height: 100vh;
     padding-bottom: 130px;
-  }
+  } */
 
   .logo {
     display: flex;
@@ -283,7 +288,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 12px;
-
+flex-shrink: 0;
   }
 
   .main .card {
@@ -294,7 +299,8 @@
 
 
   .result-data {
-    height: 100vh;
+    height: auto;
+    max-height: calc(100vh - 200px);
   }
 
   .main-bottom {
@@ -306,7 +312,7 @@
     max-width: none;
     padding: 10px 12px;
     background: white;
-    
+    flex-shrink: 0;
   }
 
   .menu-btn {
