@@ -57,14 +57,12 @@ const ContextProvider = (props) => {
   const animateResponseText = (index, nextWord) => {
 
     const speed =30 ;
-    const maxDelay=10000;
-
-    const delay = Math.min(speed * index, maxDelay);
+    
 
     const id = setTimeout(() => {
       setResultData((prev) => prev + nextWord);
 
-    }, delay)
+    }, speed)
     timeoutsRef.current.push(id)
   }
   const newChat = () => {

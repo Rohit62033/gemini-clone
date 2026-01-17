@@ -93,7 +93,7 @@
   width: 100%;
   max-width: 900px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   background-color: #f0f4f9;
@@ -101,14 +101,14 @@
   border-radius: 50px;
 }
 
-.search-box img{
+.search-box img {
   width: 24px;
   cursor: pointer;
 
 }
 
-.search-box input{
-  flex:1;
+.search-box input {
+  flex: 1;
   min-width: 0;
   background: transparent;
   border: none;
@@ -118,82 +118,86 @@
 
 }
 
-.search-box div{
+.search-box div {
   display: flex;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
 
-.bottom-info{
-  font-size:15px ;
+.bottom-info {
+  font-size: 15px;
   font-weight: 300;
   text-align: center;
-  margin-top : 10px;
+  margin-top: 10px;
   margin-bottom: 5px;
 
 }
 
-.result{
+.result {
   padding: 0 5%;
   max-height: 70vh;
   overflow-y: scroll;
-  
+
 
 }
 
-.result::-webkit-scrollbar{
-display: none;
+.result::-webkit-scrollbar {
+  display: none;
 }
 
-.result-tittle{
+.result-tittle {
   margin: 40px 0px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.result img{
+.result img {
   border-radius: 50%;
   width: 40px;
 }
 
-.result-data{
+.result-data {
   display: flex;
   align-items: start;
   gap: 20px;
- overflow-y: auto;
- max-height: 70vh;
-overflow-x: hidden;
-}
-.result-data::-webkit-scrollbar {
-  display: none; 
+  overflow-y: auto;
+  max-height: 70vh;
+  overflow-x: hidden;
 }
 
-.loader{
+.result-data::-webkit-scrollbar {
+  display: none;
+}
+
+.loader {
   width: 100%;
   display: flex;
-flex-direction: column;
-gap: 10px;
+  flex-direction: column;
+  gap: 10px;
 
 }
-.loader hr{
+
+.loader hr {
 
   border-radius: 4px;
   border: none;
   background-color: #f6f7f8;
-  background: linear-gradient(to right,#9ed7ff,#ffffff,#9ed7ff);
+  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
   background-size: 800px 50px;
   height: 20px;
   animation: loader 1.5s infinite linear;
 }
 
 @keyframes loader {
-  0%{
+  0% {
     background-position: -800px 0;
   }
-  
-  100%{background-position: 800px 0;}
-  
+
+  100% {
+    background-position: 800px 0;
+  }
+
 }
 
 .result-data {
@@ -211,9 +215,9 @@ gap: 10px;
 
 /*  markdown wrapper */
 .markdown-body {
-  flex: 1;          
+  flex: 1;
   min-width: 0;
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
   word-break: break-word;
 }
 
@@ -228,69 +232,72 @@ gap: 10px;
     visibility: hidden;
   }
 }
-.menu-icon{
+
+.menu-icon {
   display: none;
 }
 
 @media (max-width:600px) {
 
-  .main{
+  .main {
     max-height: none;
     min-height: 100vh;
     padding-bottom: 130px;
   }
-  .logo{
+
+  .logo {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
   }
 
-  .main .menu-icon{
-    display:block;
-    width: 20px ;
+  .main .menu-icon {
+    display: block;
+    width: 20px;
   }
 
-  
-  .main .nav{
+
+  .main .nav {
     font-size: 18px;
-    padding:10px
+    padding: 10px
   }
-   .main .nav .user-icon{
-    width:32px;
+
+  .main .nav .user-icon {
+    width: 32px;
   }
- 
-  .search-box div{
+
+  .search-box div {
     gap: 5px;
   }
 
-  .main-container .greet{
+  .main-container .greet {
 
-    margin: 20px 0 0 0px ;
+    margin: 20px 0 0 0px;
     font-size: 40px;
     padding: 15px;
   }
 
-  .main-container .cards{
+  .main-container .cards {
     margin-top: 40px;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 12px;
 
   }
 
-    .main .card {
+  .main .card {
     height: 180px;
     padding: 12px;
   }
 
 
 
-  .result-data{
+  .result-data {
     height: 100vh;
   }
 
-   .main-bottom {
+  .main-bottom {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -298,17 +305,20 @@ gap: 10px;
     width: 100%;
     max-width: none;
     padding: 10px 12px;
-    background: white; /* gives clean look */
-    z-index: 1000;
+    background: white;
+    
   }
-  .menu-btn{
+
+  .menu-btn {
     width: 25px;
     margin-left: 10px;
   }
-   .search-box{
+
+  .search-box {
     padding: 5px 10px;
   }
-  .search-box div{
+
+  .search-box div {
     gap: 5px;
   }
 }
@@ -316,9 +326,10 @@ gap: 10px;
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
+
 @media (max-width: 400px) {
 
   .main-container .cards {
